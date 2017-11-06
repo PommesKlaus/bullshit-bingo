@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { } from 'react-router-dom';
-import { FontIcon, RaisedButton } from "material-ui";
+import { Button, Icon } from 'semantic-ui-react';
 import { loginWithGoogle } from './googleAuth';
 import { firebaseAuth, appTokenKey } from '../../constants';
 import './Login.css';
@@ -58,13 +57,9 @@ class Login extends Component {
     return (
       <div>
         <h1>Anmelden</h1>
-        <RaisedButton
-            label="Sign in with Google"
-            labelColor={"#ffffff"}
-            backgroundColor="#dd4b39"
-            icon={<FontIcon className="fa fa-google-plus" style={{color: '#ffffff'}}/>}
-            onClick={this.handleGoogleLogin}
-        />
+        <Button color='google plus' onClick={this.handleGoogleLogin}>
+          <Icon name='google plus' /> Sign in with Google            
+        </Button>
       </div>      
     )
   }

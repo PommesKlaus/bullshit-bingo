@@ -9,6 +9,6 @@ const config = {
 firebase.initializeApp(config);
 
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
-export const ref = firebase.database().ref();
+export const ref = (path) => firebase.database().ref(path);
 export const firebaseAuth = firebase.auth;
 export const appTokenKey = 'bullshitBingoToken';
